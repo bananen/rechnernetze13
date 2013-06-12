@@ -1,0 +1,88 @@
+Frontside,Flipside,Category,Level
+Horizontale und vertikale Kommunikation,"Horizontal: Zwischen Sender und Empfaenger, Protokollinstanzen einer Schicht tauschen Daten aus
+Vertikal: Zwischen Schichten, Protokollinstanz der Schicht N greift auf Dienste der Protokollinstanz in Schicht N-1 zu bzw. gibt Daten an Schicht N+1 weiter",Rechnernetze,0
+Schichten von OSI,"(Anwendung)
+7. Anwendung
+6. Darstellung
+5. Sitzung
+(Transport)
+4. Transport
+3. Vermittlung
+2. Sicherung
+1. Bit-Uebertragung",Rechnernetze,0
+Bit-Uebertragungsschicht/Physical Layer (OSI),"Auch Physikalische Schicht
+Uebertragung von Bits
+Verwendung von Leitungscodes
+Keine Pufferung
+Keine Zuverlaessigkeit",Rechnernetze,0
+Sicherungsschicht/Data Link Layer (OSI),"Erweitert nachrichtentechnischen Kanal zum abstrakten gesicherten Kanal
+Uebertragung von Daten zwischen Dienstnehmern direkt verbundener Geraete
+Gliederung des Bitstoms in Dateneinheiten
+Pufferung",Rechnernetze,0
+Vermittlungsschicht/Network Layer (OSI),"Auch Netzwerk-Schicht
+Verknuepft Uebertragungsabschnitte zu Ende-zu-Ende-Strecken
+Wegewahl
+Adressierung
+Multiplexen",Rechnernetze,0
+Transportschicht/Transport Layer (OSI),"Uebertragung von Daten zwischen Anwendungen
+Abstrahiert von Vermittlungsschicht
+Fehlererkennung und -behebung
+Pufferung
+Adressierung
+Multiplexen",Rechnernetze,0
+Sitzungsschicht/Session Layer (OSI),"Bietet Nichtunterbrechbarkeit
+Gliederung des Datenaustauschs nach Gesichtspunkten der Anwendung",Rechnernetze,0
+Darstellungsschicht/Presentation Layer (OSI),"Kommunikation zwischen heterogenen Geraeten moeglich
+Einheitliche Darstellung der Daten (Syntax)",Rechnernetze,0
+Anwendungsschicht/Application Layer (OSI),Austausch von anwendungsabhaengigen Daten,Rechnernetze,0
+Beschreibung von Dienstprimitiven,"Name: Name der Schicht, kann auch entfallen
+Dienstleistung: Connect, Data, Release, Reset, Abort, Disconnect
+Grundtyp: Request, Indication, Response, Confirmation",Rechnernetze,0
+Internet-Referenzmodell,"Anwendung
+Transport
+Vermittlung
+Sicherung/Bit-Uebertragung",Rechnernetze,0
+Dezibel (dB),"Das Verhaeltnis L zweier Groeßen P<sub>1 </sub>und P<sub>2</sub> in dB ist definiert als
+
+L = 10 log<sub>10</sub>(P<sub>1</sub>/P<sub>2</sub>)
+
+Beispiel:
+Signal-Rauch-Abstand: SNR[dB] = 10 log<sub>10</sub>(Signalenergie/Rauschenergie)",Rechnernetze,0
+Abtasttheorem von Shannon und Raabe,"Die Abtastfrequenz f<sub>A</sub> muss groeßer als die doppelte obere Grenzfrequenz f<sub>Grenz</sub> des uebertragenen Signals sein, also
+
+f<sub>A</sub> &gt; 2 * f<sub>Grenz</sub>",Rechnernetze,0
+"Schrittgeschwindigkeit (Baudrate) und Uebertragungsgeschwindigkeit (Bitrate, Datenrate)","Schrittgeschwindigkeit:
+Zahl der Signalparameter-Zustandswechsel in einer Zeiteinheit, baud = 1/s
+
+Uebertragungsgeschwindigkeit:
+Anzahl der uebertragbaren Bitstellen pro Zeiteinheit, bit/s
+
+Bei binaeren Signalen, bei denen jeder Schritt als Signalelement genau ein Bit als Codelement darstellt: Schrittgeschwindigkeit = Uebertragungsgeschwindigkeit",Rechnernetze,0
+Datenrate vs. Bandbreite,"Max. Schrittgeschwindigkeit [baud] = 2 * Bandbreite [Hz]
+
+Bei binaren Signalen: Datenrate = 2B bit/s
+
+Datenrate C = 2B ld M
+M: Anzahl der Signalwerte",Rechnernetze,0
+Shannon-Hartley-Gesetz,"Gibt eine obere Grenze fuer die auf einer Datenleitung erzielbare Datenrate in Abhaengigkeit des Signal-Rauch-Abstands (SNR):
+
+C = B ld (1 + S/R)
+C Datenrate in bit/s
+B Bandbreite in Hz des Kanals
+S Energie des Signals
+R Energie der Stoerquelle",Rechnernetze,0
+Sendezeit t<sub>S</sub>,"Dauer, um Daten auf das Medium zu legen
+
+t<sub>S</sub> = L/d
+
+L Datenmenge
+d Datenrate",Rechnernetze,0
+Ausbreitungsverzoegerung t<sub>A</sub>,"Zeitspanne zwischen Absenden eines Signals und dessen Eintreffen am andere Ende des Mediums
+
+t<sub>A</sub> = m/v
+
+m Laenge des Mediums
+v Ausbreitungsgeschwindigkeit",Rechnernetze,0
+Bandbreiten-Verzoegerungsprodukt,"Welche Datenmenge kann gleichzeitig auf dem Medium liegen?
+
+= d * t<sub>A</sub>",Rechnernetze,0
