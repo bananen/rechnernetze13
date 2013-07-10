@@ -1,0 +1,78 @@
+\documentclass[a4paper]{scrreprt}
+
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Formelsammlung Rechnernetze}
+\author{Fedor Scholz}
+\maketitle
+
+\tableofcontents
+\vspace{1cm}
+
+\chapter{Formeln}
+
+Verhaeltnis zweier Groeßen $P_1$ und $P_2$ in dB:\\\\
+$L = 10*log_{10}(\frac{P_1}{P_2})$\\\\
+
+Signal-Rausch-Abstand:\\\\
+$SNR[dB] = 10*log_{10}(\frac{Signalenergie}{Rauschenergie})$\\\\
+
+Abtasttheorem von Shannon und Raabe:\\\\
+$f_A > 2 * f_{Grenz}$ mit Abtastfrequenz $f_A$ und Grenzfrequenz $f_{Grenz}$\\\\
+
+Datenrate:\\\\
+$C = 2*B*ld(M)$ mit Anzahl der Signalwerte M und Bandbreite B\\
+$C = B*ld(1 + \frac{S}{R})$ mit Energie des Signals S und Energie der Stoerquelle R\\\\
+
+Sendezeit:\\\\
+$t_S = \frac{L}{d}$ mit Datenmenge L und Datenrate d\\\\
+
+Ausbreitungsverzoegerung:\\\\
+$t_A = \frac{m}{v}$ mit Laenge des Mediums m und Ausbreitungsgeschwindigkeit v\\\\
+
+
+\section{Stop-and-Wait}
+
+Insgesamt benoetige Zeit:\\\\
+$t_{Ges} = t_S(Daten) + t_A + t_V(Daten) + t_S(Quittung) + t_A + t_V(Quittung)$\\\\
+
+mit Vereinfachungen:\\\\
+$t_{Ges} = t_S(Daten) + 2 * t_A = t_S + 2* t_A$\\\\
+
+Auslastung:\\\\
+$U = \frac{t_S}{t_{Ges}} = \frac{t_S}{t_S + 2t_A} = \frac{1}{1 + 2t_A/t_S}$\\
+mit $a = \frac{t_A}{t_S} = \frac{\frac{m}{v}}{\frac{l}{d}} = \frac{\frac{m}{v}d}{l}$ ergibt sich:\\
+$U = \frac{1}{1 + 2a}$\\\\
+
+Mit Wahrscheinlichkeit fuer einen Fehler p gilt:\\
+$U = \frac{1-p}{1 + 2a}$
+
+\section{Go-Back-N}
+
+Auslastung:\\\\
+$U = 1$, falls $W \geq 1 + 2a$\\
+$U = \frac{W}{1 + 2a}$, falls $W < 1 + 2a$\\
+mit Fenstergroeße W\\\\
+
+Mit Wahrscheinlichkeit fuer einen Fehler p gilt:\\
+$U = \frac{1 - p}{1 + 2ap}$, falls $W \geq 1 + 2a$\\
+$U = \frac{W(1-p)}{(1 + 2a)(1 - p + Wp)}$, falls $W < 1 + 2a$\\
+
+\section{Selective Reject}
+
+Auslastung:\\\\
+$U = 1 - p$, falls $W \geq 1 + 2a$\\
+$U = \frac{W(1-p)}{1 + 2a}$, falls $W < 1 + 2a$\\
+
+
+
+\end{document}
+
