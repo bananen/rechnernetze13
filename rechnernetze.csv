@@ -1,26 +1,8 @@
 Frontside,Flipside,Category,Level
-Horizontale und vertikale Kommunikation,"Horizontal: Zwischen Sender und Empfaenger, Protokollinstanzen einer Schicht tauschen Daten aus
-Vertikal: Zwischen Schichten, Protokollinstanz der Schicht N greift auf Dienste der Protokollinstanz in Schicht N-1 zu bzw. gibt Daten an Schicht N+1 weiter",Rechnernetze,0
-Schichten von OSI,"(Anwendung)
-7. Anwendung
-6. Darstellung
-5. Sitzung
-(Transport)
-4. Transport
-3. Vermittlung
-2. Sicherung
-1. Bit-Uebertragung",Rechnernetze,0
-Bit-Uebertragungsschicht/Physical Layer (OSI),"Auch Physikalische Schicht
-Uebertragung von Bits
-Verwendung von Leitungscodes
-Keine Pufferung
-Keine Zuverlaessigkeit",Rechnernetze,0
-Sicherungsschicht/Data Link Layer (OSI),"Erweitert nachrichtentechnischen Kanal zum abstrakten gesicherten Kanal
-Uebertragung von Daten zwischen Dienstnehmern direkt verbundener Geraete
-Gliederung des Bitstoms in Dateneinheiten
-Pufferung",Rechnernetze,0
-Vermittlungsschicht/Network Layer (OSI),"Auch Netzwerk-Schicht
-Verknuepft Uebertragungsabschnitte zu Ende-zu-Ende-Strecken
+Beschreibung von Dienstprimitiven,"Name: Name der Schicht, kann auch entfallen
+Dienstleistung: Connect, Data, Release, Reset, Abort, Disconnect
+Grundtyp: Request, Indication, Response, Confirmation",Rechnernetze,0
+Vermittlungsschicht/Network Layer (OSI),"Verknuepft Uebertragungsabschnitte zu Ende-zu-Ende-Strecken
 Wegewahl
 Adressierung
 Multiplexen",Rechnernetze,0
@@ -30,40 +12,11 @@ Fehlererkennung und -behebung
 Pufferung
 Adressierung
 Multiplexen",Rechnernetze,0
-Sitzungsschicht/Session Layer (OSI),"Bietet Nichtunterbrechbarkeit
-Gliederung des Datenaustauschs nach Gesichtspunkten der Anwendung",Rechnernetze,0
 Darstellungsschicht/Presentation Layer (OSI),"Kommunikation zwischen heterogenen Geraeten moeglich
 Einheitliche Darstellung der Daten (Syntax)",Rechnernetze,0
 Anwendungsschicht/Application Layer (OSI),Austausch von anwendungsabhaengigen Daten,Rechnernetze,0
-Beschreibung von Dienstprimitiven,"Name: Name der Schicht, kann auch entfallen
-Dienstleistung: Connect, Data, Release, Reset, Abort, Disconnect
-Grundtyp: Request, Indication, Response, Confirmation",Rechnernetze,0
-Internet-Referenzmodell,"Anwendung
-Transport
-Vermittlung
-Sicherung/Bit-Uebertragung",Rechnernetze,0
-Dezibel (dB),"Das Verhaeltnis L zweier Groeßen P<sub>1 </sub>und P<sub>2</sub> in dB ist definiert als
-
-L = 10 log<sub>10</sub>(P<sub>1</sub>/P<sub>2</sub>)
-
-Beispiel:
-Signal-Rauch-Abstand: SNR[dB] = 10 log<sub>10</sub>(Signalenergie/Rauschenergie)",Rechnernetze,0
-Abtasttheorem von Shannon und Raabe,"Die Abtastfrequenz f<sub>A</sub> muss groeßer als die doppelte obere Grenzfrequenz f<sub>Grenz</sub> des uebertragenen Signals sein, also
-
-f<sub>A</sub> &gt; 2 * f<sub>Grenz</sub>",Rechnernetze,0
-"Schrittgeschwindigkeit (Baudrate) und Uebertragungsgeschwindigkeit (Bitrate, Datenrate)","Schrittgeschwindigkeit:
-Zahl der Signalparameter-Zustandswechsel in einer Zeiteinheit, baud = 1/s
-
-Uebertragungsgeschwindigkeit:
-Anzahl der uebertragbaren Bitstellen pro Zeiteinheit, bit/s
-
-Bei binaeren Signalen, bei denen jeder Schritt als Signalelement genau ein Bit als Codelement darstellt: Schrittgeschwindigkeit = Uebertragungsgeschwindigkeit",Rechnernetze,0
-Datenrate vs. Bandbreite,"Max. Schrittgeschwindigkeit [baud] = 2 * Bandbreite [Hz]
-
-Bei binaren Signalen: Datenrate = 2B bit/s
-
-Datenrate C = 2B ld M
-M: Anzahl der Signalwerte",Rechnernetze,0
+Sitzungsschicht/Session Layer (OSI),"Bietet Nichtunterbrechbarkeit
+Gliederung des Datenaustauschs nach Gesichtspunkten der Anwendung",Rechnernetze,0
 Shannon-Hartley-Gesetz,"Gibt eine obere Grenze fuer die auf einer Datenleitung erzielbare Datenrate in Abhaengigkeit des Signal-Rauch-Abstands (SNR):
 
 C = B ld (1 + S/R)
@@ -71,18 +24,105 @@ C Datenrate in bit/s
 B Bandbreite in Hz des Kanals
 S Energie des Signals
 R Energie der Stoerquelle",Rechnernetze,0
-Sendezeit t<sub>S</sub>,"Dauer, um Daten auf das Medium zu legen
+Selective Reject Auslastung mit Fehler,"U
+= 1 - p, falls W &gt;= 1 + 2a
+= W(1-p)/(1 + 2a), falls W &lt; 1 + 2a",Rechnernetze,0
+"Hauptaspekte eines Kommunikationssystems, denen Qualitaetsparameter zugeordnet werden koennen","Angemessenheit
+technische Leistung
+Zuverlaessigkeit
+Sicherheit
+Kosten",Rechnernetze,0
+Go-Back-N Auslastung mit und ohne Fehler,"Auslastung U
+= 1, falls W &gt;= 1 + 2a
+= W/(1 + 2a), falls W &lt; 1 + 2a
+mit Fenstergroeße W
 
-t<sub>S</sub> = L/d
-
-L Datenmenge
-d Datenrate",Rechnernetze,0
+Mit Wahrscheinlichkeit fuer einen Fehler p gilt U
+= (1-p)/(1 + 2ap), falls W &gt;= 1 + 2a
+= W(1-p)/((1 + 2a)(1-p+Wp)), falls W &lt; 1 + 2a",Rechnernetze,0
 Ausbreitungsverzoegerung t<sub>A</sub>,"Zeitspanne zwischen Absenden eines Signals und dessen Eintreffen am andere Ende des Mediums
 
 t<sub>A</sub> = m/v
 
 m Laenge des Mediums
 v Ausbreitungsgeschwindigkeit",Rechnernetze,0
+Schichten von OSI,"(Anwendung)
+7. Anwendung
+6. Darstellung
+5. Sitzung
+(Transport)
+4. Transport
+3. Vermittlung
+2. Sicherung
+1. Bit-Uebertragung",Rechnernetze,0
+Abtasttheorem von Shannon und Raabe,"Die Abtastfrequenz f<sub>A</sub> muss groeßer als die doppelte obere Grenzfrequenz f<sub>Grenz</sub> des uebertragenen Signals sein, also
+
+f<sub>A</sub> &gt; 2 * f<sub>Grenz</sub>",Rechnernetze,0
+Datenrate vs. Bandbreite,"Max. Schrittgeschwindigkeit [baud] = 2 * Bandbreite [Hz]
+
+Bei binaren Signalen: Datenrate = 2B bit/s
+
+Datenrate C = 2B ld M
+oder C = B * ld(1 + S/R)
+M: Anzahl der Signalwerte",Rechnernetze,0
+Betriebsarten von HDLC,"Normal Response Mode (NRM): Primaerstation -&gt; Sekundarstation (Halbduplex)
+
+Asynchronous Response Mode (ARM): Primaerstation -&gt; Sekundaerstation (Vollduplex)
+
+Asynchronous Balanced Mode (ABM): Beide Stationen gleichwertig (Vollduplex)",Rechnernetze,0
+Sicherungsschicht/Data Link Layer (OSI),"Erweitert nachrichtentechnischen Kanal zum abstrakten gesicherten Kanal
+Uebertragung von Daten zwischen Dienstnehmern direkt verbundener Geraete
+Gliederung des Bitstoms in Dateneinheiten
+Pufferung",Rechnernetze,0
+Dezibel (dB),"Das Verhaeltnis L zweier Groeßen P<sub>1 </sub>und P<sub>2</sub> in dB ist definiert als
+
+L = 10 log<sub>10</sub>(P<sub>1</sub>/P<sub>2</sub>)
+
+Beispiel:
+Signal-Rauch-Abstand: SNR[dB] = 10 log<sub>10</sub>(Signalenergie/Rauschenergie)",Rechnernetze,0
+Sendezeit t<sub>S</sub>,"Dauer, um Daten auf das Medium zu legen
+
+t<sub>S</sub> = L/d
+
+L Datenmenge
+d Datenrate",Rechnernetze,0
+Horizontale und vertikale Kommunikation,"Horizontal: Zwischen Sender und Empfaenger, Protokollinstanzen einer Schicht tauschen Daten aus
+Vertikal: Zwischen Schichten, Protokollinstanz der Schicht N greift auf Dienste der Protokollinstanz in Schicht N-1 zu bzw. gibt Daten an Schicht N+1 weiter",Rechnernetze,0
+Signal-Rausch-Abstand SNR,SNR[dB] = 10 * log<sub>10</sub>(Signalenergie/Rauschenergie),Rechnernetze,0
 Bandbreiten-Verzoegerungsprodukt,"Welche Datenmenge kann gleichzeitig auf dem Medium liegen?
 
-= d * t<sub>A</sub>",Rechnernetze,0
+= C * t<sub>A</sub> mit Datenrate C und Ausbreitungsverzoegerung t<sub>A</sub>",Rechnernetze,0
+Internet-Referenzmodell,"Anwendung
+Transport
+Vermittlung
+Sicherung/Bit-Uebertragung",Rechnernetze,0
+Multiplexverfahren,"Frequenzmultiplex: Unterschiedliche Frequenzen
+Zeitmultiplex: Nach Zeit eingeteilt
+Codemultiplex: Signal pro Dienstnehmer mit Code verknuepft
+Raummultiplex: Unterschiedliche Leitungen",Rechnernetze,0
+"Schrittgeschwindigkeit (Baudrate) und Uebertragungsgeschwindigkeit (Bitrate, Datenrate)","Schrittgeschwindigkeit:
+Zahl der Signalparameter-Zustandswechsel in einer Zeiteinheit, baud = 1/s
+
+Uebertragungsgeschwindigkeit:
+Anzahl der uebertragbaren Bitstellen pro Zeiteinheit, bit/s
+
+Bei binaeren Signalen, bei denen jeder Schritt als Signalelement genau ein Bit als Codelement darstellt: Schrittgeschwindigkeit = Uebertragungsgeschwindigkeit",Rechnernetze,0
+Stop-and-Wait Formeln fuer benoetigte Zeit und Auslastung mit und ohne Fehler,"t<sub>Ges</sub> = t<sub>S</sub>(Daten) + t<sub>A</sub> + t<sub>V</sub>(Daten) + t<sub>S</sub>(Quittung) + t<sub>A</sub> + t<sub>V</sub>(Quittung)
+
+bzw. mit Vereinfachungen
+
+t<sub>Ges</sub> = t<sub>S</sub>(Daten) + 2 * t<sub>A
+
+</sub>Auslastung U = t<sub>S</sub>/t<sub>Ges</sub> = t<sub>S</sub>/(t<sub>S</sub> + 2 * t<sub>A</sub>)
+mit a = t<sub>A</sub>/t<sub>S</sub> ergibt sich
+U = 1/(1 + 2a)
+
+Mit Wahrscheinlichkeit fuer einen Fehler p gilt
+U = (1-p)/(1 + 2a)",Rechnernetze,0
+Metriken fuer die technische Leistungsfaehigkeit eines Kommunikationssystems,"Bandbreite
+Durchsatz
+Verzoegerung",Rechnernetze,0
+Bit-Uebertragungsschicht/Physical Layer (OSI),"Uebertragung von Bits
+Verwendung von Leitungscodes
+Keine Pufferung
+Keine Zuverlaessigkeit",Rechnernetze,0
