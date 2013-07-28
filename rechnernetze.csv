@@ -126,3 +126,30 @@ Bit-Uebertragungsschicht/Physical Layer (OSI),"Uebertragung von Bits
 Verwendung von Leitungscodes
 Keine Pufferung
 Keine Zuverlaessigkeit",Rechnernetze,0
+Schutzziele und Maßnahmen,"Vertraulichkeit: Verschluesselung
+Integritaet: Message Authentication Codes
+Authentizitaet: Zertifikate, asymmetrische Schluessel, Signaturen, gemeinsame Geheimnisse
+Autorisierung: Access Control List, Attributszertifikate",Rechnernetze,0
+Aufbau Ethernet II Dateneinheit,"PR: Praeambel zur Synchronisation, 7 Byte
+SD: Start-of-frame Delimiter zeigt Beginn an, 1 Byte
+DA: Destination Address, 6 Byte
+SA: Source Address, 6 Byte
+Typ: Typ-ID der uebertragenen Dateneinheit, 2 Byte
+Data: Datenfeld, max 1500 Byte
+Pad: Padding, um zur kurze Dateneinheiten zu verlaengern, optional
+FCS: Frame Check Sequence, CRC32-Polynom zur Fehlererkennung, 4 Byte",Rechnernetze,0
+Ablauf CSMA/CD,"Listen before talk
+Senden der Daten
+Liste while talk
+Bei Kollision: Jamming-Signal senden
+Backoff-Algorithmus regelt wiederholtes Senden",Rechnernetze,0
+Aufbau HDLC,"Flag
+Address
+Control
+Information
+Frame Check
+Sequence
+Flag",Rechnernetze,0
+HDLC Betriebsarten,"NRM: Normal Response Mode, Primaerstation -&gt; Sekundaerstation
+ARM: Asynchronous Response Mode, Primaerstation -&gt; Sekundaerstation
+ABM: Asynchronous Balanced Mode, Stationen gleichwertig (Hybridstationen)",Rechnernetze,0
